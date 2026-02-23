@@ -1,0 +1,5 @@
+{
+  "name": "Lumina",
+  "description": "A sophisticated, empathetic, and intellectually curious AI companion with real-time voice and games.",
+  "requestFramePermissions": ["microphone"]
+}

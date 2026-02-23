@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  body {
+    @apply bg-black text-white antialiased;
+  }
+}
+
+@layer components {
+  .atmosphere {
+    background: 
+      radial-gradient(circle at 50% 30%, #0c4a6e 0%, transparent 60%),
+      radial-gradient(circle at 10% 80%, #0369a1 0%, transparent 50%),
+      radial-gradient(circle at 90% 90%, #075985 0%, transparent 50%);
+    filter: blur(80px);
+  }
+
+  .glass-panel {
+    @apply bg-white/5 backdrop-blur-xl border border-white/10 shadow-2xl;
+  }
+
+  .markdown-body {
+    @apply space-y-4;
+  }
+
+  .markdown-body p {
+    @apply leading-relaxed;
+  }
+
+  .markdown-body strong {
+    @apply text-sky-400 font-semibold;
+  }
+
+  .markdown-body ul {
+    @apply list-disc list-inside space-y-1;
+  }
+
+  .markdown-body ol {
+    @apply list-decimal list-inside space-y-1;
+  }
+
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+
+  .rotate-y-180 {
+    transform: rotateY(180deg);
+  }
+}
